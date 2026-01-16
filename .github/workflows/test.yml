@@ -26,3 +26,6 @@ jobs:
 
       - name: Executar Testes
         run: npm run test
+
+      - name: Executar testes com cobertura mínima
+        run: npx jest --coverage --coverageThreshold='{"global":{"lines":80}}'
