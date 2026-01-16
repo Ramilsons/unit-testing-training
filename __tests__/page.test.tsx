@@ -10,4 +10,12 @@ describe('Page', () => {
  
     expect(button).toBeInTheDocument()
   })
+
+  it('renders a button with the correct text', () => {
+    render(<Page />)
+ 
+    const button = screen.getByRole('button')
+ 
+    expect(button).toHaveTextContent('Clique aqui')
+  })
 })
